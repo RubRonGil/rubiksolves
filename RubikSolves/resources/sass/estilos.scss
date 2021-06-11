@@ -1,0 +1,828 @@
+
+/*Variable con los colores típicos de la web*/
+:root{
+    --verde: #85E943;
+    --gris: #717370;
+    --grisClaro: rgb(215,215,215);
+    --titulos: 'Montserrat', sans-serif;
+    --principal: 'Asap', sans-serif;
+    --sombra:  5px 5px 5px 5px rgba(0, 0, 0, 0.2);
+    --borde:solid red 1px;
+}
+
+/*Importación de la fuente Beaver*/
+/*@font-face{
+    font-family: 'beaver';
+    src: url('../fonts/beaver-webfont.woff2') format('woff2'),
+         url('../fonts/beaver-webfont.woff') format('woff'),
+         url('../fonts/beaver.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}*/
+
+/*Magenes*/
+.margenes{
+    width: 80%;
+    max-width: 1920px;
+    min-width: 320px;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+.margenesfondo{
+    //background: url("../img/fondo.jpg");
+    overflow: hidden;
+    height: 80%;
+    width: 100%;
+    min-width: 320px;
+}
+
+.modooscuro{
+    background-color: black;
+    transition: 0.8s;
+}
+
+/*Body con la letra principal*/
+body{
+font-family: var(--principal);
+margin: 0%;
+}
+
+input{
+    width: 100%;
+    height: 40px;
+    border: none;
+    background-color: var(--gris);
+    outline: none;
+    color: var(--verde);
+    font-family: var(--principal);
+    font-size: 20px;
+}
+
+/*Color de los placeholder en verde*/
+::placeholder{color:var(--verde);}
+
+/*Todas las transiciones con tiempo para que sea más visual*/
+*:hover{
+    transition: 0.3s ease; /*Añado la propiedad ease para que tenga un efecto más visual*/
+}
+
+
+
+/*********************************************************CABECERA*****************************************/
+/*Cabecera con el nombre de la web/logo*/
+.cabecera{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    background-color: var(--gris);
+    width: 80%;
+    margin: 0 auto;
+}
+
+/*Colores Cabecera*/
+.colorCabecera{
+    font-family: var(--titulos);
+    background-color: var(--gris);
+}
+
+/*Colores navegación*/
+.colorNavegacion{
+    font-family: var(--titulos);
+    background-color: var(--verde);  
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+
+/*Dividir en 2 la barra de navegación (Contenido/buscar y usuario)*/
+.divNavegacion{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    top: 80px;
+    position: sticky;
+}
+
+
+
+/*Barra de navegación*/
+.navegacion{
+    background-color: var(--verde);
+    color: black;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 0 auto;
+    list-style: none;
+    /*border: solid red 1px;*/
+}
+
+/*Barra de usuario/busqueda*/
+.navegacionDerecha{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: flex-start;
+    border: solid red 1px;
+}
+
+/*lista de la barra de navegación*/
+.navegacion li{
+    float: left;
+    padding: 15px;
+    font-weight: 700;
+    font-size: 20px;
+}
+.navegacion li:hover{
+    background-color: var(--gris);
+    color: var(--verde);
+}
+
+.navegacion ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+abbr li i{
+    font-size: 22px;
+}
+
+/*Quitar la linea de los hipervínculos del header*/
+.navegacion a{
+    text-decoration: none;
+    color: inherit;
+}
+
+/*Logo de la web*/
+.logo{
+    width: 250px;
+    padding: 10px;
+}
+
+/*Icono de la cabecera*/
+.iconoLogin{
+    height: 100px; 
+}
+
+/*iconos de login y busqueda en la barra de navegación*/
+header i{
+    font-size: 30px;
+    align-items: center;
+
+}
+
+
+/***********************************************************PIE DE PAG************************************************************/
+.pie{
+    background-color: var(--gris);
+    font-family: var(--titulos);
+    /*margin-top: 30px;*/
+}
+
+.footerelement{
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+/*flex footer*/
+.flexfooter{
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.footerelement li{
+    color: var(--verde);
+    text-align: center;
+    list-style: none;
+    padding: 10px;
+}
+
+/****************************************************INDEX MAIN*******************************************************/
+/*Div categorías de juegos*/
+.juegosaleatorios{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    width: 100%;
+    height: 400px;
+    margin-top: 30px;
+}
+.juegoscolumna{
+    display: flex;
+    flex-direction:column;
+    width: 50%;
+    height: 400px;
+}
+.juegosaleatoriosgrande{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+.juegosaleatoriosgrande img{
+    height: 400px;
+    margin-top: -100px;
+    width: 100%;
+}
+.filajuegospequeños{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+    height: auto;
+    padding: 0px;
+}
+.juegosaleatoriospequeño{
+    width: 50%;
+    height: 200px;
+    margin: 0px;
+    overflow: hidden;
+}
+.imgjuegoaleatorio{
+    height: 200px;
+}
+.divimg{
+    position: relative;
+}
+.divtxt{
+    position: absolute;
+    top: 35%;
+    left: 20%;
+    font-size: 0px;
+    font-weight: bold;
+    color: var(--verde);
+    font-family: var(--titulos);
+}
+.divimg:hover .divtxt{
+    transition-duration: 0.3s;
+    font-size: 20px;
+    background-color: black;
+}
+
+
+/*Section que contiene los dos div*/
+.seccionprincipal{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+}
+
+
+/*sección ultimas reseñas / juegos mejor valorados*/
+.noticias{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 30%;
+    background-color: var(--grisClaro);
+    box-shadow: var(--sombra);
+}
+.ultimasreseñas{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 30%;
+    background-color: var(--grisClaro);
+    box-shadow: var(--sombra);
+    margin-bottom: 30px;
+}
+.barraderecha{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 30%;
+}
+
+
+.buscadoroculto{
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    margin-bottom: 20px;
+    background-color:var(--grisClaro);
+    box-shadow: var(--sombra);
+}
+.buscadoroculto form{
+    width: 100%;
+}
+.buscadoroculto input{
+    width: 100%;
+    padding: 0;
+}
+
+.redessocialesoculto{
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    margin-bottom: 20px;
+    background-color:var(--grisClaro);
+    box-shadow: var(--sombra);
+}
+
+.contenidobarraderecha{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    margin-bottom: 20px;
+    background-color:var(--grisClaro);
+    box-shadow: var(--sombra);
+}
+.contenidobarraderecha form{
+    width: 100%;
+    margin: 0px;
+}.contenidobarraderecha input{
+    width: 100%;
+    margin: 0px;
+    padding: 0;
+}
+.contenidobarraderecha img{
+    align-items: center;
+    margin-bottom: 10px;
+    width: 100%;
+}
+.contenedorRS{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    width: 100%;
+}
+#redesSociales{ /*ID redesSociales para distinguir entre las imágenes de las redes sociales con la de top juegos*/
+    align-self: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 80px;
+    height: auto;
+}
+
+/*Cabecera del div con el titulo*/
+.titulossection{
+    background-color: var(--verde);
+    text-align: center;
+    width: 100%;
+    height: 50px;
+    border-bottom: var(--gris) solid 10px;
+    font-family: var(--titulos);
+}
+.titulossection p{
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 13px;
+}
+
+/*Div que contiene todas las reseñas*/
+.reseña{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--grisClaro);
+}
+
+/*Contenido de la reseña y de los mejores juegos*/
+.contenedoreseña{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-bottom: solid var(--verde) 2px;
+}
+.contenedoreseña img {
+    -webkit-transition:all .9s ease; /* Safari y Chrome */
+    -moz-transition:all .9s ease; /* Firefox */
+    -o-transition:all .9s ease; /* IE 9 */
+    -ms-transition:all .9s ease; /* Opera */
+    width:100%;
+    margin-top: 20px;
+    }
+.contenedoreseña img:hover{
+    -webkit-transform:scale(1.25);
+    -moz-transform:scale(1.25);
+    -ms-transform:scale(1.25);
+    -o-transform:scale(1.25);
+    transform:scale(1.25);
+}
+.contenedoreseña h3{
+    font-family: var(--titulos);
+    font-weight: bold;
+    margin-top: 5px;
+    margin-left: 8px;
+    margin-right: 8px;
+    margin-bottom: 0px;
+}
+.contenedoreseña p{
+    font-family: var(--principal);
+    margin-top: 3px;
+    margin-left: 8px;
+    margin-right: 8px;
+    margin-bottom: 20px;
+}
+.contenedoreseña a{
+    overflow: hidden;
+}
+
+
+
+/********************************************************************LOGIN Y REGISTRO***************************************************/
+/*Div que contiene los formularios*/
+.divlog{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    width: 100%;
+}
+
+/*Div que contiene los dos cuadros de login y registro*/
+.divform{
+    padding-bottom: 50px;
+    width: 80%;
+}
+
+/*Cuadro del login*/
+.login{
+    width: 50%;
+    background-color: var(--grisClaro);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    box-shadow: var(--sombra);
+}
+.imglogin{
+    display: flex;
+    flex-wrap: nowrap;
+    box-shadow: var(--sombra);
+    width: 50%;
+    height: 430px;
+}
+.imglogin img{
+    width: 100%;
+}
+/*Cuadro del registro*/
+.register{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 60%;
+    background-color: var(--grisClaro);
+    display: flex;
+    align-items: center;
+    box-shadow: var(--sombra);
+}
+
+/*Div e input que controlan todo el formato y el estilo de los input
+  Cada entrada input tendrá el mismo formato y se repetirán una bajo otra*/
+.divinput{
+    padding-top: 10px;
+    padding-left: 10px;
+}
+.divinput input {
+    margin-right: 50px;
+    width: 100%;
+    height: 40px;
+    border: none;
+    background-color: var(--gris);
+    outline: none;
+    color: var(--verde);
+    font-family: var(--principal);
+    font-size: 20px;
+    padding: 0;
+}
+
+/*Div que contiene el checkbox, distinto al de input apra que el cuadro y el label estén a la misma altura*/
+.divcheckbox{
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+    align-items: center;
+    padding-left: 10px;
+}
+.recuadro{
+    width: 15px;
+}
+
+/*Estilo del botón*/
+.divbutton{
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+    align-items: center;
+    padding-left: 10px;
+    padding-top: 30px;
+    align-self: center;
+}
+.divbutton  button{
+    background-color: var(--verde);
+    font-family: var(--principal);
+    width: 40%;
+    height: 45px;
+    border: 2px solid var(--gris);
+    font-size: 20px;
+    min-width: 70px;
+}
+.divbutton button:hover{
+    background-color: var(--gris);
+    color: var(--verde);
+}
+#botonregister{
+    background-color: var(--verde);
+    font-family: var(--principal);
+    width: 60%;
+    height: 45px;
+    border: 2px solid var(--gris);
+    font-size: 20px;
+    color: black;
+    min-width: 105px;
+}
+#botonregister:hover{
+    background-color: var(--gris);
+    color: var(--verde);
+}
+
+.enlace{
+    background-color: var(--verde);
+    font-family: var(--principal);
+    width: 40%;
+    height: 45px;
+    display:inline;
+    border: 2px solid var(--gris);
+    padding:0;
+    margin:0;
+    font-size: 20px;
+    line-height:1em;
+}
+
+#register{
+    min-width: 113px;
+}
+
+/********************************************************************RESEÑAS***************************************************/
+/*Section que contiene los dos div*/
+.reseñaprincipal{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.reseñaprincipal .analisis{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.contenedoranalisis{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+}
+.analisis{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 65%;
+    margin-right: 20px;
+    background-color: var(--grisClaro);
+}
+.analisis img{
+    width: 80%;
+    align-self: center;
+}
+.analisis h1{
+    font-family: var(--titulos);
+}
+.topreseñas{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 30%;
+    margin-bottom: 20px;
+    background-color:var(--grisClaro);
+    box-shadow: var(--sombra);
+}
+.txtvaloracion{
+    //font-family: beaver;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    font-size: 75px;
+}
+.valoracion{
+    color: var(--verde);
+    font-size: 75px;
+}
+
+/*********************************************************MENÚ HAMBURGUESA*****************************************/
+.respmenu {
+    color: black;
+    background: var(--verde);
+    min-height: 48px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+  }
+
+.respmenu a { 
+    color: inherit;
+    text-decoration: none;
+    display: block;
+    padding: 10px 20px;
+    border-bottom: 2px solid var(--gris);
+    max-width: 200px;
+    background: var(--verde);
+    font-variant: small-caps;
+    font-weight: bold;
+  }
+
+  .respmenu input[type="checkbox"], .respmenu .fa-bars, .respmenu .fa-times {
+    position: absolute;  
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    right: 0;
+    top: 0;
+    width: 48px;
+    height: 48px;  
+  }
+   
+  .respmenu .fa-bars, .respmenu .fa-times {
+    font-size: 48px;
+    pointer-events: none;
+  }
+   
+  .respmenu input[type="checkbox"] {
+    opacity: 0; 
+  }
+   
+  .respmenu nav {
+    display: none;
+  }
+   
+  .respmenu input:checked ~ nav {
+    display: block;
+  }
+   
+  .respmenu input:checked ~ .fa-bars {
+    display: none;
+  }
+   
+  .respmenu input:not(:checked) ~ .fa-times {
+    display: none;
+  }
+  .respmenu li{
+      list-style: none;
+  }
+
+  #lunahamburguesa{
+      padding-left: 21px;
+      padding-bottom: 10px;
+      padding-top: 10px;
+  }
+
+
+/*********************************************************SLIDER*****************************************/
+.slider{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.mySlides {
+    display:inline-block;
+    position: relative;
+    }
+  
+.txtcentro {
+    position: absolute;
+    font-size: 50px;
+    top: 70px;
+    left: 18%;
+    font-weight: bold;
+    color: white;
+}
+.txtizq {
+    position: absolute;
+    font-size: 65px;
+    top: 40px;
+    left: 5%;
+    font-weight: bold;
+}
+
+.txtpeq {
+    position: absolute;
+    font-size: 40px;
+    top: 80px;
+    left: 10%;
+    font-weight: bold;
+    background-color: var(--verde);
+    text-align: center;
+}
+
+/*********************************************************RESPONSIVE*****************************************/
+@media screen and (min-width:851px){
+    .respmenu{
+        display: none;
+    }
+}
+@media screen and (max-width: 930px){
+    .flexfooter{
+        flex-direction: column;
+    }
+}
+
+@media all and (max-width: 850px){
+    .ultimasreseñas{
+        width: 100%;
+    }
+    .noticias{
+        width: 100%;
+    }
+
+    .barraderecha{
+        width: 100%;
+    }
+    .buscadoroculto{
+        display: flex;
+    }
+    .redessocialesoculto{
+        display: flex;
+    }
+    #buscadororiginal{
+        display: none;
+        
+    }#redesoriginal{
+        display: none;
+    }
+    #columnaderecha{
+        display: none;
+    }
+    .juegoscolumna{
+        width: 100%;
+    }
+    .colorNavegacion{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 800px){
+    .imglogin{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 892px){
+    .navegacion li{
+        font-size: 15px;
+        margin: 0;
+    }
+    .navegacion i{
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 720px){
+    .navegacion li{
+        font-size: 10px;
+    }
+    .navegacion i{
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 560px){
+    .navegacion li{
+        font-size: 7.5px;
+    }
+    .navegacion i{
+        font-size: 8px;
+    }
+}

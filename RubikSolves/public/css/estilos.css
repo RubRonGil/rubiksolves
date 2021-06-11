@@ -1,0 +1,847 @@
+@charset "UTF-8";
+
+/*Variable con los colores típicos de la web*/
+
+:root {
+  --gris: #717370;
+  --grisClaro: rgb(215,215,215);
+  --titulos: "Montserrat", sans-serif;
+  --principal: "Asap", sans-serif;
+  --sombra: 5px 5px 5px 5px rgba(0, 0, 0, 0.2);
+  --borde: solid red 1px;
+}
+
+/*Importación de la fuente Beaver*/
+
+/*@font-face{
+    font-family: 'beaver';
+    src: url('../fonts/beaver-webfont.woff2') format('woff2'),
+         url('../fonts/beaver-webfont.woff') format('woff'),
+         url('../fonts/beaver.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}*/
+
+/*Magenes*/
+
+.margenes {
+  width: 80%;
+  max-width: 1920px;
+  min-width: 320px;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+.margenesfondo {
+  overflow: hidden;
+  height: 80%;
+  width: 100%;
+  min-width: 320px;
+}
+
+.modooscuro {
+  background-color: black;
+  transition: 0.8s;
+}
+
+/*Body con la letra principal*/
+
+body {
+  font-family: var(--principal);
+  margin: 0%;
+}
+
+
+/*Todas las transiciones con tiempo para que sea más visual*/
+
+*:hover {
+  transition: 0.3s ease;
+  /*Añado la propiedad ease para que tenga un efecto más visual*/
+}
+
+/*********************************************************CABECERA*****************************************/
+
+/*Cabecera con el nombre de la web/logo*/
+
+.cabecera {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  width: 80%;
+  margin: 0 auto;
+}
+
+/*Colores Cabecera*/
+
+.colorCabecera {
+  font-family: var(--titulos);
+}
+
+/*Colores navegación*/
+
+.colorNavegacion {
+  font-family: var(--titulos);
+  position: sticky;
+  top: 0;
+  z-index: 9999999;
+}
+
+/*Dividir en 2 la barra de navegación (Contenido/buscar y usuario)*/
+
+.divNavegacion {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: sticky;
+  top: 0;
+  z-index: 9999999;
+  background-color: black;
+}
+
+/*Barra de navegación*/
+
+.navegacion {
+  color: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 0 auto;
+  list-style: none;
+  /*border: solid red 1px;*/
+}
+
+/*Barra de usuario/busqueda ?*/
+
+.navegacionDerecha {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: flex-start;
+  border: solid red 1px;
+}
+
+/*lista de la barra de navegación*/
+
+.navegacion li {
+  float: left;
+  padding: 15px;
+  font-weight: 700;
+  font-size: 20px;
+  color: white;
+}
+
+/*.navegacion li:hover {
+  color: var(--verde);
+}*/
+
+/*Hover sobre el menú*/
+.hovBlue:hover{
+  background-color: #216778;
+  color: black;
+}
+
+.hovRed:hover{
+  background-color: #A02C2C;
+  color: black;
+}
+
+.hovGreen:hover{
+  background-color: rgb(21, 136, 21);
+  color: black;
+}
+
+.hovOrange:hover{
+  background-color: rgb(233, 161, 29);
+  color: black;
+}
+
+.hovYell:hover{
+  background-color: #D4AA00;
+  color: black;
+}
+
+.hovWh:hover{
+  background-color: white;
+  color: black;
+}
+
+.navegacion ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+abbr li i {
+  font-size: 22px;
+}
+
+/*Quitar la linea de los hipervínculos del header*/
+
+.navegacion, .respmenu a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/*Logo de la web*/
+
+.logo {
+  width: 250px;
+  padding: 10px;
+}
+
+/*Icono de la cabecera*/
+
+.iconoLogin {
+  height: 100px;
+}
+
+/*iconos de login y busqueda en la barra de navegación*/
+
+header i {
+  font-size: 30px;
+  align-items: center;
+}
+
+/* Desplegable */
+.navegacion li ul {
+  display:none;
+  position:absolute;
+  min-width:120px;
+  background-color: black;
+  margin-top: 15px;
+}
+
+.navegacion li:hover > ul {
+  display:flex;
+  flex-direction: column;
+}
+
+.navegacion li ul li {
+  position:relative;
+}
+
+.navegacion li ul li ul {
+  right:-140px;
+  top:0px;
+}
+
+.navegacion li ul a li {
+  width: 100%;
+  text-align: center;
+}
+
+.navegacion ul a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/***********************************************************PIE DE PAG************************************************************/
+
+.pie {
+  background-color: var(--gris);
+  font-family: var(--titulos);
+  /*margin-top: 30px;*/
+}
+
+.footerelement {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+/*flex footer*/
+
+.flexfooter {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.footerelement li {
+  color: white;
+  text-align: center;
+  list-style: none;
+  padding: 10px;
+}
+
+/****************************************************INDEX MAIN*******************************************************/
+
+.container{
+  background-color: white;
+}
+
+main{
+  background-image: url('/img/Fondo.png');
+  min-height: 450px;
+}
+
+
+/******************************************************** PUEDE SER UTIL **********************************************************************************/
+.divimg {
+  position: relative;
+}
+
+.divtxt {
+  position: absolute;
+  top: 35%;
+  left: 20%;
+  font-size: 0px;
+  font-weight: bold;
+  color: var(--verde);
+  font-family: var(--titulos);
+}
+
+.divimg:hover .divtxt {
+  transition-duration: 0.3s;
+  font-size: 20px;
+  background-color: black;
+}
+
+/*sección ultimas reseñas / juegos mejor valorados*/
+
+.noticias {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 30%;
+  background-color: var(--grisClaro);
+  box-shadow: var(--sombra);
+}
+/* zoom imagen */
+.contenedoreseña img:hover {
+  transform: scale(1.25);
+}
+
+
+.contenedoreseña a {
+  overflow: hidden;
+}
+/******************************************************************** PRINCIPAL ****************************************************************************/
+
+.seccionprincipal {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/*Cabecera del div con el titulo*/
+
+.titulossection {
+  text-align: center;
+  width: 100%;
+  height: 50px;
+  border-bottom: var(--gris) solid 10px;
+  font-family: var(--titulos);
+  /*background-color: var(--grisClaro);*/
+  background-color: white;
+}
+
+.titulossection p {
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 13px;
+}
+.fullBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: var(--grisClaro);
+  box-shadow: var(--sombra);
+  margin-bottom: 30px;
+}
+
+.meddiumBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 60%;
+  background-color: var(--grisClaro);
+  box-shadow: var(--sombra);
+  margin-bottom: 30px;
+  background-color: white;
+}
+
+.contenidoSeccion {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: white;
+}
+
+.contenidoSeccion p{
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+.container{
+  background: transparent !important;
+}
+
+table{
+  padding: 1%;
+}
+.row{
+  padding: 1%;
+}
+
+/************************************************ TARJETAS *******************************************/
+.contenedorTarjetas{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contenedorTarjetas a:hover{
+  color: inherit;
+  text-decoration: none;
+}
+
+.tarjeta{
+  box-shadow: var(--sombra);
+  margin: 20px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.tarjeta p {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.tarjeta img{
+  margin: 5px;
+}
+
+
+
+/************************************************************************ CONTENIDO DE LAS SECCIONES Y RESOLUCIONES ************************************************************************/
+.contenidoSeccion h1{
+  margin-left: 0.5%;
+  font-weight: 450;
+}
+
+
+.txtIzq{
+  text-align: left;
+}
+
+.txtIzq h2, h5{
+  margin-left: 0.5%;
+  font-weight: 450;
+}
+
+.txtIzq img {
+  width: 90px;
+  padding-left: 0,5%;
+  padding-right: 0,5%;
+}
+
+.txtIzq div{
+  display: flex;
+  justify-content: center;
+  align-content: space-between;
+  flex-wrap: wrap;
+}
+
+.txtIzq div div{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  padding-left: 5%;
+  padding-left: 5%;
+}
+
+.txtIzq div div img{
+  padding-left: 5%;
+  padding-left: 5%;
+  width: 100px;
+}
+
+.txtIzq div div p{
+  text-align: center;
+}
+
+.txtIzq ul, ol{
+  margin-left: 2%;
+}
+
+.contenidoSeccion .tabla,.card{
+  margin: 10px;
+}
+
+
+/********************************************************************LOGIN Y REGISTRO***************************************************/
+
+/*Div que contiene los formularios*/
+
+.divlog {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  width: 100%;
+}
+
+/*Div que contiene los dos cuadros de login y registro*/
+
+.divform {
+  padding-bottom: 50px;
+  width: 80%;
+}
+
+/*Cuadro del login*/
+
+.login {
+  width: 50%;
+  background-color: var(--grisClaro);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-shadow: var(--sombra);
+}
+
+.imglogin {
+  display: flex;
+  flex-wrap: nowrap;
+  box-shadow: var(--sombra);
+  width: 50%;
+  height: 430px;
+}
+
+.imglogin img {
+  width: 100%;
+}
+
+/*Cuadro del registro*/
+
+.register {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 60%;
+  background-color: var(--grisClaro);
+  display: flex;
+  align-items: center;
+  box-shadow: var(--sombra);
+}
+
+/*Div e input que controlan todo el formato y el estilo de los input
+  Cada entrada input tendrá el mismo formato y se repetirán una bajo otra*/
+
+.divinput {
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.divinput input {
+  margin-right: 50px;
+  width: 100%;
+  height: 40px;
+  border: none;
+  background-color: var(--gris);
+  outline: none;
+  color: var(--verde);
+  font-family: var(--principal);
+  font-size: 20px;
+  padding: 0;
+}
+
+/*Div que contiene el checkbox, distinto al de input apra que el cuadro y el label estén a la misma altura*/
+
+.divcheckbox {
+  display: flex;
+  flex-direction: row;
+  flex-flow: wrap;
+  align-items: center;
+  padding-left: 10px;
+}
+
+.recuadro {
+  width: 15px;
+}
+
+/*Estilo del botón*/
+
+.divbutton {
+  display: flex;
+  flex-direction: row;
+  flex-flow: wrap;
+  align-items: center;
+  padding-left: 10px;
+  padding-top: 30px;
+  align-self: center;
+}
+
+.divbutton button {
+  font-family: var(--principal);
+  width: 40%;
+  height: 45px;
+  border: 2px solid var(--gris);
+  font-size: 20px;
+  min-width: 70px;
+}
+
+.divbutton button:hover {
+  background-color: var(--gris);
+  color: var(--verde);
+}
+
+#botonregister {
+  background-color: var(--verde);
+  font-family: var(--principal);
+  width: 60%;
+  height: 45px;
+  border: 2px solid var(--gris);
+  font-size: 20px;
+  color: black;
+  min-width: 105px;
+}
+
+#botonregister:hover {
+  background-color: var(--gris);
+  color: var(--verde);
+}
+
+.enlace {
+  background-color: var(--verde);
+  font-family: var(--principal);
+  width: 40%;
+  height: 45px;
+  display: inline;
+  border: 2px solid var(--gris);
+  padding: 0;
+  margin: 0;
+  font-size: 20px;
+  line-height: 1em;
+}
+
+#register {
+  min-width: 113px;
+}
+
+
+/*********************************************************MENÚ HAMBURGUESA*****************************************/
+
+.respmenu {
+  color: white;
+  background: black;
+  min-height: 48px;
+  /*position: -webkit-sticky;*/
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+}
+
+.respmenu a {
+  color: inherit;
+  text-decoration: none;
+  display: block;
+  padding: 10px 20px;
+  background: black;
+  font-variant: small-caps;
+  font-weight: bold;
+  width: 100%;
+}
+
+.respmenu input[type=checkbox],
+.respmenu .fa-bars,
+.respmenu .fa-times {
+  position: absolute;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  right: 0;
+  top: 0;
+  width: 48px;
+  height: 48px;
+}
+
+.respmenu .fa-bars,
+.respmenu .fa-times {
+  font-size: 48px;
+  pointer-events: none;
+}
+
+.respmenu input[type=checkbox] {
+  opacity: 0;
+}
+
+.respmenu nav {
+  display: none;
+}
+
+.respmenu input:checked ~ nav {
+  display: block;
+}
+
+.respmenu input:checked ~ .fa-bars {
+  display: none;
+}
+
+.respmenu input:not(:checked) ~ .fa-times {
+  display: none;
+}
+
+.respmenu li {
+  list-style: none;
+}
+
+#lunahamburguesa {
+  padding-left: 21px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+/*********************************************************SLIDER*****************************************/
+
+.slider {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  z-index: 0;
+}
+
+.mySlides {
+  display: inline-block;
+  position: relative;
+}
+
+.txtcentro {
+  position: absolute;
+  font-size: 50px;
+  top: 70px;
+  left: 18%;
+  font-weight: bold;
+  color: white;
+}
+
+.txtizq {
+  position: absolute;
+  font-size: 40px;
+  top: 40px;
+  left: 5%;
+  font-weight: bold;
+}
+
+.txtpeq {
+  position: absolute;
+  font-size: 40px;
+  top: 80px;
+  left: 10%;
+  font-weight: bold;
+  background-color: var(--verde);
+  text-align: center;
+}
+
+/*********************************************************RESPONSIVE*****************************************/
+
+@media screen and (min-width: 851px) {
+  .respmenu {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 930px) {
+  .flexfooter {
+    flex-direction: column;
+  }
+}
+
+@media all and (max-width: 850px) {
+  .fullBox {
+    width: 100%;
+  }
+
+  .noticias {
+    width: 100%;
+  }
+
+  .barraderecha {
+    width: 100%;
+  }
+
+  .buscadoroculto {
+    display: flex;
+  }
+
+  .redessocialesoculto {
+    display: flex;
+  }
+
+  #buscadororiginal {
+    display: none;
+  }
+
+  #redesoriginal {
+    display: none;
+  }
+
+  #columnaderecha {
+    display: none;
+  }
+
+  .juegoscolumna {
+    width: 100%;
+  }
+
+  .colorNavegacion {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .imglogin {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 892px) {
+  .navegacion li {
+    font-size: 15px;
+    margin: 0;
+  }
+
+  .navegacion i {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .navegacion li {
+    font-size: 10px;
+  }
+
+  .navegacion i {
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .navegacion li {
+    font-size: 7.5px;
+  }
+
+  .navegacion i {
+    font-size: 8px;
+  }
+}
+
