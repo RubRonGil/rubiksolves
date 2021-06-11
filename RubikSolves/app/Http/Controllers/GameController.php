@@ -24,6 +24,8 @@ class GameController extends Controller
         return view('tiempos', compact('cubos', 'marks', 'resolves'));
     }
 
+    //PRUEBA
+
     public function addCubo(Request $request){
         return redirect('/index')->with('alert', 'Cubo añadido');
     }
