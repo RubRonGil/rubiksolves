@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Mark extends Model
 {
     use HasFactory;
+    protected $fillable = ['resolve_id', 'milisec'];
     
     /**
      * Relación M-1 Con Resolve
@@ -17,10 +18,4 @@ class Mark extends Model
     }
 
     
-    /**
-     * Relación M-1 Con User_cube
-     */
-    public function user(){
-        return $this->belongsTo('App\Models\User_cube');
-    }
 }

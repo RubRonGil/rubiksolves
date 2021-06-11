@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class User_cube extends Model
 {
     use HasFactory;
+    protected $fillable = ['name', 'user_id', 'cube_type_id'];
 
     /**
      * Relación M-1 Con Users
@@ -26,7 +27,7 @@ class User_cube extends Model
     /**
      * Relación 1-M con Mark
      */
-    public function marks(){
-        return $this->hasMany('App\Models\Mark');
+    public function resolves(){
+        return $this->hasMany('App\Models\Resolve');
     }
 }

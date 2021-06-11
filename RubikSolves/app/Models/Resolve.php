@@ -11,6 +11,13 @@ class Resolve extends Model
     protected $fillable = ['user_cube_id', 'avg_time'];
 
     /**
+     * Relación M-1 Con User_cube
+     */
+    public function user_cube(){
+        return $this->belongsTo('App\Models\User_cube');
+    }
+
+    /**
      * Relación 1-M con Marks
      */
     public function marks(){
