@@ -34,7 +34,7 @@
                     <div class="card">
                         <div class="card-header">{{ __('Añadir cubo') }}</div>
                         <div class="card-body">
-                            <form method="POST" action="{{ route('tiempos.addCubo') }}">
+                            <form method="Post" action="{{ url('') }}">
                                 @csrf <!--Token oculte para enviar post-->
                                 <input id="id" type="hidden" class="form-control @error('id') is-invalid @enderror" name="id" value="{{ @Auth::user()->id }}" required autocomplete="id" autofocus>
                                 
@@ -63,14 +63,17 @@
                                     </div>
                                 </div>
         
+                            </form> 
+                            <!-- El botón está fuera del formulario para que envie a la pag de mantenimiento -->
+                            <a href="{{ url('mantenimiento') }}">
                                 <div class="form-group row mb-0">
                                     <div class="col-md-6 offset-md-4">
-                                        <button type="submit" class="btn btn-primary">
+                                        <button type="hidden" class="btn btn-primary">
                                             {{ __('Agregar cubo') }}
                                         </button>
                                     </div>
                                 </div>
-                            </form>
+                            </a>
                         </div>
                     </div>
 
@@ -142,6 +145,9 @@
                                     </div>
                                 </div>
         
+                            </form>
+                            <!-- El botón está fuera del formulario para que envie a la pag de mantenimiento -->
+                            <a href="{{ url('mantenimiento') }}">
                                 <div class="form-group row mb-0">
                                     <div class="col-md-6 offset-md-4">
                                         <button type="submit" class="btn btn-primary">
@@ -149,7 +155,7 @@
                                         </button>
                                     </div>
                                 </div>
-                            </form>
+                            </a>
                         </div>
                     </div>
                     
@@ -188,6 +194,9 @@
                                     </div>
                                 </div>
         
+                            </form>
+                            <!-- El botón está fuera del formulario para que envie a la pag de mantenimiento -->
+                            <a href="{{ url('mantenimiento') }}">
                                 <div class="form-group row mb-0">
                                     <div class="col-md-6 offset-md-4">
                                         <button type="submit" class="btn btn-primary">
@@ -195,7 +204,7 @@
                                         </button>
                                     </div>
                                 </div>
-                            </form>
+                            </a>
                         </div>
                     </div>
 

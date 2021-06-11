@@ -36,6 +36,7 @@ Route::get('/notacion', function(){ return view('notaciones/notacion'); });
 Route::get('/resolucion', function(){ return view('resoluciones/resolucion'); });
 Route::get('/resolucion/2x2x2', function(){ return view('resoluciones/princ2x2x2'); });
 Route::get('/resolucion/3x3x3', function(){ return view('resoluciones/princ3x3x3'); });
+Route::get('/mantenimiento', function(){ return view('mantenimiento'); });
 
 Route::group(['middleware' => ['role:Admin']], function() {
     Route::resource('roles', RoleController::class);
