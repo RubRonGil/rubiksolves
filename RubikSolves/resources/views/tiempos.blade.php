@@ -203,3 +203,20 @@
             </div>
         </div>
     @endsection
+
+    @section('script')
+        <script>
+            $(document).ready(function(){
+                $.ajax({
+                    url: 'user_cubes/userCubes',
+                    method: 'POST',
+                    data:{
+                        id:1
+                    }
+                }).done(function(res){
+                    alert(res);
+                });
+
+            });
+        </script>
+    @endsection

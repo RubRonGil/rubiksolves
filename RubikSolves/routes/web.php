@@ -46,12 +46,13 @@ Route::group(['middleware' => ['permission:role-list']], function() {
     Route::resource('roles', RoleController::class);
 });
 
+Route::post('user_cubes/userCubes', 'User_cubeController@userCubes');
+Route::resource('user_cubes', User_cubeController::class);
+Route::resource('resolves', ResolveController::class);
 
 Route::group(['middleware' => ['auth']],function(){
     Route::get('/perfil', function(){ return view('users/modify'); });
-    Route::resource('resolves', ResolveController::class);
     Route::resource('marks', MarkController::class);
-    Route::resource('user_cubes', User_cubeController::class);
     Route::resource('tiempos', GameController::class);
     Route::put('/addCubo', 'GameController@addCubo')->name('tiempos.addCubo');
     Route::post('/addResolve', 'GameController@addResolve')->name('tiempos.addResolve');

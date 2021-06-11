@@ -128,38 +128,62 @@
                         INICIO
                     </li>
                 </a>
-                <a class="hovBlue" href="reseña.html">
+                <a class="hovBlue" href="{{ url('/notacion') }}">
                     <li>
                     NOTACIÓN
                     </li>
                 </a>
-                <a class="hovOrange" href="index.html">
+                <a class="hovOrange" href="{{ url('/resolucion') }}">
                     <li class="hovOrange">
                         RESOLUCIÓN
                     </li>
                 </a>
-                <a class="hovGreen" href="index.html">
+                <a class="hovGreen" href="{{ url('/tiempos') }}">
                     <li class="hovGreen">
                         TIEMPOS
                     </li>
                 </a>
-                <abbr class="hovYell" title="Iniciar Sesión">
-                    <a class="hovYell" href="{{ route('login') }}">
-                        <li class="hovYell">
-                            <i class="fas fa-sign-in-alt"></i>
-                        </li>
-                    </a>
-                </abbr>
-                <abbr class="hovYell" title="Iniciar Sesión">
-                    <a class="hovYell"  href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                        <li class="hovYell">
-                            <i class="fas fa-sign-out-alt"></i>
-                        </li>
-                    </a>
-                </abbr>
-                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                    @csrf
-                </form>
+                <li class="hovYell">
+                    
+                    @if(!@Auth::user()) <!-- Si no estámos logeados saldrá el icono para iniciar sesión, si lo estamos, el de salir -->
+                        <a href="{{ route('login') }}">
+                            <li class="hovYell"><i class="fas fa-sign-in-alt"></i></li>
+                        </a>
+                    @else
+                        <a href="{{ url('/perfil') }}">
+                            <li class="hovYell">
+                                <i class="fas fa-user-edit"></i>
+                            </li>
+                        </a>
+                        <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                            <li class="hovYell">
+                                <i class="fas fa-sign-out-alt"></i>
+                            </li>
+                        </a>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            @csrf
+                        </form>
+                    @endif
+                    
+                </li>
+
+            <!-- Si tienes el rol de usuario te saldrá el panel para modificar los permisos y roles del usuario -->
+            @if(@Auth::user())
+                @if(@Auth::user()->hasPermissionTo('role-list'))
+                <li class="hovRed">
+                        <a href="{{ url('/users') }}">
+                            <li class="hovRed">
+                                <i class="fas fa-users-cog"></i>
+                            </li>
+                        </a>
+                        <a href="{{ url('/roles') }}">
+                            <li class="hovRed">
+                                <i class="fas fa-user-tag"></i>
+                            </li>
+                        </a>
+                </li>
+                @endif
+            @endif
                 <abbr title="Modo oscuro">
                     <li onclick="oscuro()" class="hovWh">
                         <i class="fas fa-moon"  id="lunahamburguesa"></i>
@@ -203,5 +227,6 @@
         </div>
     </footer>
     <script src="{{ asset('js/scripts.js') }}"></script>
+    @yield('script')
 </body>
 </html>

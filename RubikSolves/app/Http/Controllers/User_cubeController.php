@@ -38,4 +38,12 @@ class User_cubeController extends Controller
 
         return response()->json(null, 204);
     }
+
+    public function userCubes(){
+        // $id = Auth::user()->id; 
+        // $cubos = DB::select('SELECT uc.*, ct.name AS tipo FROM user_cubes uc JOIN cube_types ct ON uc.cube_type_id = ct.id WHERE uc.user_id = ?', [$id]);
+        // return response()->json($cubos, 404);
+
+        return 'hola';
+    }
 }

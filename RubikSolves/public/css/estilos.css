@@ -284,7 +284,7 @@ main{
 
 
 /******************************************************** PUEDE SER UTIL **********************************************************************************/
-.divimg {
+/* .divimg {
   position: relative;
 }
 
@@ -302,11 +302,11 @@ main{
   transition-duration: 0.3s;
   font-size: 20px;
   background-color: black;
-}
+} */
 
 /*sección ultimas reseñas / juegos mejor valorados*/
 
-.noticias {
+/* .noticias {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -314,16 +314,16 @@ main{
   width: 30%;
   background-color: var(--grisClaro);
   box-shadow: var(--sombra);
-}
+} */
 /* zoom imagen */
-.contenedoreseña img:hover {
+/* .contenedoreseña img:hover {
   transform: scale(1.25);
 }
 
 
 .contenedoreseña a {
   overflow: hidden;
-}
+} */
 /******************************************************************** PRINCIPAL ****************************************************************************/
 
 .seccionprincipal {
@@ -488,158 +488,6 @@ table{
 }
 
 
-/********************************************************************LOGIN Y REGISTRO***************************************************/
-
-/*Div que contiene los formularios*/
-
-.divlog {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  width: 100%;
-}
-
-/*Div que contiene los dos cuadros de login y registro*/
-
-.divform {
-  padding-bottom: 50px;
-  width: 80%;
-}
-
-/*Cuadro del login*/
-
-.login {
-  width: 50%;
-  background-color: var(--grisClaro);
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  box-shadow: var(--sombra);
-}
-
-.imglogin {
-  display: flex;
-  flex-wrap: nowrap;
-  box-shadow: var(--sombra);
-  width: 50%;
-  height: 430px;
-}
-
-.imglogin img {
-  width: 100%;
-}
-
-/*Cuadro del registro*/
-
-.register {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  width: 60%;
-  background-color: var(--grisClaro);
-  display: flex;
-  align-items: center;
-  box-shadow: var(--sombra);
-}
-
-/*Div e input que controlan todo el formato y el estilo de los input
-  Cada entrada input tendrá el mismo formato y se repetirán una bajo otra*/
-
-.divinput {
-  padding-top: 10px;
-  padding-left: 10px;
-}
-
-.divinput input {
-  margin-right: 50px;
-  width: 100%;
-  height: 40px;
-  border: none;
-  background-color: var(--gris);
-  outline: none;
-  color: var(--verde);
-  font-family: var(--principal);
-  font-size: 20px;
-  padding: 0;
-}
-
-/*Div que contiene el checkbox, distinto al de input apra que el cuadro y el label estén a la misma altura*/
-
-.divcheckbox {
-  display: flex;
-  flex-direction: row;
-  flex-flow: wrap;
-  align-items: center;
-  padding-left: 10px;
-}
-
-.recuadro {
-  width: 15px;
-}
-
-/*Estilo del botón*/
-
-.divbutton {
-  display: flex;
-  flex-direction: row;
-  flex-flow: wrap;
-  align-items: center;
-  padding-left: 10px;
-  padding-top: 30px;
-  align-self: center;
-}
-
-.divbutton button {
-  font-family: var(--principal);
-  width: 40%;
-  height: 45px;
-  border: 2px solid var(--gris);
-  font-size: 20px;
-  min-width: 70px;
-}
-
-.divbutton button:hover {
-  background-color: var(--gris);
-  color: var(--verde);
-}
-
-#botonregister {
-  background-color: var(--verde);
-  font-family: var(--principal);
-  width: 60%;
-  height: 45px;
-  border: 2px solid var(--gris);
-  font-size: 20px;
-  color: black;
-  min-width: 105px;
-}
-
-#botonregister:hover {
-  background-color: var(--gris);
-  color: var(--verde);
-}
-
-.enlace {
-  background-color: var(--verde);
-  font-family: var(--principal);
-  width: 40%;
-  height: 45px;
-  display: inline;
-  border: 2px solid var(--gris);
-  padding: 0;
-  margin: 0;
-  font-size: 20px;
-  line-height: 1em;
-}
-
-#register {
-  min-width: 113px;
-}
-
-
 /*********************************************************MENÚ HAMBURGUESA*****************************************/
 
 .respmenu {
@@ -771,48 +619,11 @@ table{
     width: 100%;
   }
 
-  .noticias {
-    width: 100%;
-  }
-
-  .barraderecha {
-    width: 100%;
-  }
-
-  .buscadoroculto {
-    display: flex;
-  }
-
-  .redessocialesoculto {
-    display: flex;
-  }
-
-  #buscadororiginal {
-    display: none;
-  }
-
-  #redesoriginal {
-    display: none;
-  }
-
-  #columnaderecha {
-    display: none;
-  }
-
-  .juegoscolumna {
-    width: 100%;
-  }
-
   .colorNavegacion {
     display: none;
   }
 }
 
-@media screen and (max-width: 800px) {
-  .imglogin {
-    display: none;
-  }
-}
 
 @media screen and (max-width: 892px) {
   .navegacion li {
