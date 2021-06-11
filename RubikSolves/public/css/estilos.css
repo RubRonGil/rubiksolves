@@ -282,48 +282,6 @@ main{
   min-height: 450px;
 }
 
-
-/******************************************************** PUEDE SER UTIL **********************************************************************************/
-/* .divimg {
-  position: relative;
-}
-
-.divtxt {
-  position: absolute;
-  top: 35%;
-  left: 20%;
-  font-size: 0px;
-  font-weight: bold;
-  color: var(--verde);
-  font-family: var(--titulos);
-}
-
-.divimg:hover .divtxt {
-  transition-duration: 0.3s;
-  font-size: 20px;
-  background-color: black;
-} */
-
-/*sección ultimas reseñas / juegos mejor valorados*/
-
-/* .noticias {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  width: 30%;
-  background-color: var(--grisClaro);
-  box-shadow: var(--sombra);
-} */
-/* zoom imagen */
-/* .contenedoreseña img:hover {
-  transform: scale(1.25);
-}
-
-
-.contenedoreseña a {
-  overflow: hidden;
-} */
 /******************************************************************** PRINCIPAL ****************************************************************************/
 
 .seccionprincipal {
@@ -643,6 +601,10 @@ table{
 
   .navegacion i {
     font-size: 10px;
+  }
+
+  .contenedorTarjetas{
+    flex-direction: column;
   }
 }
 
