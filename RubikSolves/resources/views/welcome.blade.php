@@ -6,22 +6,17 @@
     <div class="slider">
         <div class="w3-content w3-display-container">
             <div class="mySlides">
-                <img src="img/monopoly.jpg" style="width:100%">
-                <div class="txtpeq">
-                    ¿Estrategia?<br>¿suerte?
-                </div>
+                <a href="{{ url('/resolucion') }}">
+                    <img src="img/rubikslider1.jpg" style="width:100%">
+                </a>
             </div>
             <div class="mySlides">
-                <img src="img/rubikslider.jpg" style="width:100%">
-                <div class="txtizq">
-                    Método<br>Fridrich<br>Rubik<br>3x3
-                </div>
+                <img src="img/rubikslider2.jpg" style="width:100%">
             </div>
             <div class="mySlides">
-                <img src="img/consola.jpg" style="width:100%">
-                <div class="txtcentro">
-                    ¿Se consideran los videojuegos un  juego de mesa?
-                </div>
+                <a href="{{ url('/notacion/2x2x2') }}">
+                    <img src="img/rubikslider3.jpg" style="width:100%">
+                </a>
             </div>
             
         
